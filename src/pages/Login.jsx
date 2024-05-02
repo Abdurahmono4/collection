@@ -24,10 +24,9 @@ function Login() {
         />
         <div className="mt-4">
           <SubmitBtn text="Login" />
-          
         </div>
-        <button className="btn btn-secondary btn-block">Guest user</button>
-        <p className="text-center">
+        <button className="btn btn-secondary btn-block mt-3">Guest user</button>
+        <p className="text-center mt-3">
           Not a member?
           <Link to="./register" className="capitalize link link-primary">
             Register

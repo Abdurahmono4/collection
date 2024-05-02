@@ -1,68 +1,51 @@
-import { useSelector } from "react-redux";
-import { BiCart } from "react-icons/bi";
+import { BsCart, BsMoonFill, BsSunFill } from "react-icons/bs";
+import { FaBarsStaggered } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+import NavLinks from "./NavLinks";
 
 function Navbar() {
-  // const { total } = useSelector((store) => store.products);
   return (
-    <div>
-      <div className="navbar bg-base-100 py-4 mb-10">
+    <nav className="bg-base-200 ">
+      <div className="navbar align-content">
         <div className="navbar-start">
+          <NavLink
+            to="/"
+            className="hidden lg:flex btn btn-primary text-3xl items-center"
+          >
+            C
+          </NavLink>
+          {/* Dropdown */}
           <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h7"
-                />
-              </svg>
-            </div>
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+              <FaBarsStaggered className="h-6 w-6 " />
+            </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52"
             >
-              <li>
-                <a>Homepage</a>
-              </li>
-              <li>
-                <a>Portfolio</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
+              <NavLinks />
             </ul>
           </div>
         </div>
-        <div className="navbar-center">
-          <a className="btn btn-ghost text-2xl capitalize hover:bg-green-500">
-            MyShop
-          </a>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu  menu-horizontal">
+            <NavLinks />
+          </ul>
         </div>
         <div className="navbar-end">
-          <div className="indicator">
-            <div className="indicator bg-white">
-              <span className="indicator-item badge badge-secondary">
-                {/* {total} */}
+          {/* themeIcon */}
+          {/* Cart Link */}
+          <NavLink className="btn btn-circle btn-md ml-4">
+            <div className="indicator">
+              <BsCart className="w-8 h-8" />
+              <span className="badge badge-sm  badge-primary indicator-item">
+                10
               </span>
-              <button className="btn bg-inherit ">
-                <BiCart className="w-8 h-8" />
-              </button>
             </div>
-          </div>
+          </NavLink>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

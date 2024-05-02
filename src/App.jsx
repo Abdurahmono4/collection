@@ -1,7 +1,3 @@
-import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
-import Navbar from "./components/Navbar";
-
 //routes
 import { createBrowserRouter, RouterProvider, Routes } from "react-router-dom";
 
@@ -19,7 +15,7 @@ import {
   Products,
   SingleProducts,
 } from "./pages/index";
-import { SiN26 } from "react-icons/si";
+// import { SiN26 } from "react-icons/si";
 function App() {
   const routes = createBrowserRouter([
     {

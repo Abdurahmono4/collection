@@ -7,8 +7,8 @@ function SubmitBtn({ text }) {
   return (
     <button
       type="submit"
+      className="btn btn-primary btn-block capitalize"
       disabled={isSubmitting}
-      className="bg-base-100 text-base-100 text-base-800 font-bold py-2 px-4 rounded-lg shadow-lg"
     >
       {isSubmitting ? (
         <>
