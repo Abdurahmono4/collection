@@ -2,7 +2,7 @@ import React from "react";
 
 function CheckOut() {
   return (
-    <div>
+    <div className="align-content">
       <h1>CheckOut</h1>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita

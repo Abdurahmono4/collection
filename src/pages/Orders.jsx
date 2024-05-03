@@ -1,6 +1,6 @@
 const Orders = () => {
   return (
-    <div>
+    <div className="align-content">
       <h1>Orders</h1>
     </div>
   );

@@ -1,8 +1,9 @@
+import Hero from "../components/Hero";
 function Landing() {
   return (
-    <>
-      <h1>Landing</h1>
-    </>
+    <div className="align-content">
+      <Hero />
+    </div>
   );
 }
 

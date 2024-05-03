@@ -1,6 +1,6 @@
 function Products() {
   return (
-    <div>
+    <div className="align-content">
       <h1>Products</h1>
     </div>
   );
