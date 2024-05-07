@@ -15,7 +15,11 @@ import {
   Products,
   SingleProducts,
 } from "./pages/index";
-// import { SiN26 } from "react-icons/si";
+import ErrorElement from "./components/ErrorElement";
+//loaders
+import { laoder as LandingLoader } from "./pages/Landing";
+import { laoder as SingleProductLoader } from "./pages/SingleProducts";
+
 function App() {
   const routes = createBrowserRouter([
     {
@@ -26,6 +30,8 @@ function App() {
         {
           index: true,
           element: <Landing />,
+          errorElement: <ErrorElement />,
+          loader: LandingLoader,
         },
         {
           path: "products",
@@ -36,8 +42,9 @@ function App() {
           element: <About />,
         },
         {
-          path: "product/:id",
+          path: "products/:id",
           element: <SingleProducts />,
+          loader: SingleProductLoader,
         },
         {
           path: "cart",
