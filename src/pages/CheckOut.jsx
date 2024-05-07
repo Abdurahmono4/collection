@@ -1,17 +1,14 @@
-import React from "react";
-
-function CheckOut() {
+function Checkout() {
   return (
-    <div className="align-content">
-      <h1>CheckOut</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        ratione eveniet earum labore quis eum unde asperiores deserunt quisquam,
-        sapiente hic animi? Maxime minima distinctio eveniet, quam perspiciatis
-        explicabo alias!
-      </p>
+    <div>
+        <h1>Checkout</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Magni enim ex incidunt omnis beatae ab laborum tempora adipisci quidem illum a corporis, ipsam vero saepe vel non quibusdam! 
+          Cumque modi, fuga voluptatem magnam nisi qui nihil sequi ullam natus perferendis nobis asperiores temporibus tenetur similique voluptas maxime accusamus ipsum tempore.
+        </p>
     </div>
-  );
+  )
 }
 
-export default CheckOut;
+export default Checkout

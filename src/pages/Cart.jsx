@@ -1,17 +1,10 @@
-import React from "react";
-
 function Cart() {
   return (
-    <div className="align-content">
-      <h1>Cart</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-        iusto sint at perspiciatis natus officia aliquid vel optio
-        exercitationem obcaecati ipsum expedita eaque accusantium itaque illo,
-        sunt et eum alias!
-      </p>
+    <div className="align-content pt-20">
+      <h3 className="max-w-2xl text-3xl font-semibold mb-6">Your Cart Is Empty</h3>
+      <div className="w-full h-[1px] bg-slate-200"></div>
     </div>
-  );
+  )
 }
 
-export default Cart;
+export default Cart

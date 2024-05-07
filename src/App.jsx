@@ -1,27 +1,30 @@
-//routes
-import { createBrowserRouter, RouterProvider, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-//from index.js
+// pages
 import {
   About,
-  Error,
-  Login,
-  Register,
-  Cart,
-  CheckOut,
   HomeLayout,
-  Landing,
+  Error,
+  Checkout,
+  Cart,
   Orders,
   Products,
-  SingleProducts,
-} from "./pages/index";
-import ErrorElement from "./components/ErrorElement";
-//loaders
-import { laoder as LandingLoader } from "./pages/Landing";
-import { laoder as SingleProductLoader } from "./pages/SingleProducts";
+  Login,
+  Landing,
+  SingleProduct,
+  Register,
+} from "./pages";
+
+// components
+import { ErrorElement } from "./components";
+
+// loaders
+import { loader as LandingLoader } from "./pages/Landing";
+import { loader as SingleProductLoader } from "./pages/SingleProduct";
+import { loader as ProductLoader } from "./pages/Products";
 
 function App() {
-  const routes = createBrowserRouter([
+  const routers = createBrowserRouter([
     {
       path: "/",
       element: <HomeLayout />,
@@ -34,28 +37,29 @@ function App() {
           loader: LandingLoader,
         },
         {
-          path: "products",
-          element: <Products />,
-        },
-        {
-          path: "about",
+          path: "/about",
           element: <About />,
         },
         {
-          path: "products/:id",
-          element: <SingleProducts />,
+          path: "/products",
+          element: <Products />,
+          loader: ProductLoader,
+        },
+        {
+          path: "/product/:id",
+          element: <SingleProduct />,
           loader: SingleProductLoader,
         },
         {
-          path: "cart",
+          path: "/cart",
           element: <Cart />,
         },
         {
-          path: "checkout",
-          element: <CheckOut />,
+          path: "/checkout",
+          element: <Checkout />,
         },
         {
-          path: "orders",
+          path: "/orders",
           element: <Orders />,
         },
       ],
@@ -66,12 +70,12 @@ function App() {
       errorElement: <Error />,
     },
     {
-      path: "/register",
+      path: "register",
       element: <Register />,
       errorElement: <Error />,
     },
   ]);
-  return <RouterProvider router={routes} />;
+  return <RouterProvider router={routers} />;
 }
 
 export default App;

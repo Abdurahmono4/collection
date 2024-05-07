@@ -1,13 +1,12 @@
 import SectionTitle from "./SectionTitle";
 import ProductsGrid from "./ProductsGrid";
-
-function FeaturedProducts() {
+function FeatureProducts() {
   return (
     <div className="pt-24">
-      <SectionTitle text="featured products" />
+      <SectionTitle text={""} />
       <ProductsGrid />
     </div>
   );
 }
 
-export default FeaturedProducts;
+export default FeatureProducts;

@@ -1,18 +1,18 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom"
 
-//components
-import { Navbar } from "../components";
-import Header from "../components/Header";
+// components
+import { Header, Navbar } from "../components"
+
 function HomeLayout() {
   return (
-    <>
-      <Header />
-      <Navbar />
-      <main className="container">
-        <Outlet />
-      </main>
-    </>
-  );
+  <>
+    <Header/>
+    <Navbar/>
+    <main>
+      <Outlet/>
+    </main>
+  </>
+  )
 }
 
-export default HomeLayout;
+export default HomeLayout
